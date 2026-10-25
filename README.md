@@ -28,8 +28,8 @@ The jquery-dom.html page uses:
 1. Download and extract this repository.
 2. Put the project folder inside C:\xampp\htdocs.
 3. Open XAMPP Control Panel and start Apache.
-4. Open http://localhost/YOUR-FOLDER-NAME/books.html.
-5. Open http://localhost/YOUR-FOLDER-NAME/jquery-dom.html.
+4. Open http://localhost/JAVASCRIPTSS/books.html.
+5. Open http://localhost/JAVASCRIPTSS/jquery-dom.html.
 6. Keep an internet connection available to load jQuery from its CDN.
 
 Replace YOUR-FOLDER-NAME with the actual project folder name.
