@@ -1,8 +1,8 @@
 # Lab 4b: JSON and jQuery
 
 ## Student Details
-- Name: Fitrah Zakiah Binti Faisal
-- Student ID: AI240088
+- Name: FITRAH ZAKIAH BINTI FAISAL
+- Matric Num: AI240088
 - Course: BIC21203 Web Development
 - Section: 7
 
