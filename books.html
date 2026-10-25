@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Book Information</title>
+</head>
+<body>
+    <h1>Book Information</h1>
+
+    <h2>Title of the first book</h2>
+    <p id ="firstTitle"></p>
+
+    <h2>Author of the second book</h2>
+    <p id ="secondAuthor"></p>
+
+    <h2>Genres of the book</h2>
+    <ul id ="genresList"></ul>
+
+    <p id ="status" role="status" aria-live="polite">
+        Loading book information...
+    </p>
+
+    <script>
+        async function loadBooks(){
+          const status = document.getElementById("status");
+
+            try {
+                const response = await fetch("books.json");
+
+                if (!response.ok) {
+                    throw new Error("Could not load the file.");
+                }
+
+                const data = await response.json();
+
+                document.getElementById("firstTitle").textContent =
+                    data.books[0].title;
+
+                document.getElementById("secondAuthor").textContent =
+                    data.books[1].author;
+
+                const genresList = document.getElementById("genresList");
+                
+                for (const book of data.books) {
+        const item = document.createElement("li");
+
+        item.textContent = book.title + "-" + book.genres.join(", ");
+
+        genresList.appendChild(item);
+    }
+
+        status.textContent = "JSON loaded and parsed successfully";
+        }
+        catch (error) {
+                status.textContent =
+                    "Unable to load book information. Please check books.json and try again.";
+            }
+        }
+
+        loadBooks();
+    </script>
+    
+
+</body>
+</html>
